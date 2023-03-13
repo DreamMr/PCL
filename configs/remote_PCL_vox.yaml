@@ -1,0 +1,40 @@
+batch_size: 256
+experiment_name: pcl_test
+root: ./dataset/vox_aligned/processed_align
+train: ./dataset/vox_aligned/vox_train_list_remove_id.txt
+gpu_ids: '0'
+dataset: 'VOX' # BU3D or RAFDB or VOX
+start_epochs: 1
+neg_alpha: 1.6
+#pose_alpha: 0.001
+pose_alpha: 1.
+warm_up: -1
+wd: 1.0e-3
+T: 0.07
+num_threads: 6
+save_epoch: 50
+dim: 512
+linear_dim: 6272
+checkpoint_dir: ./checkpoints
+epochs: 6000
+continue_train: False
+eval: False
+eval_mode: 'exp' # 'exp' or 'pose' or 'face_cycle'
+eval_epochs: 300
+seed: 1234
+log_path: ./logs
+model_name: exppose # 小写
+dataset_name: expposedb # 小写   expposedb
+img_size: 64  # train 64 eval 100
+lr: 1.0e-4
+print_img: 50
+print_loss : 20
+load_model: ~ # None
+save_img_dir: ./save_img
+save_img: False
+print_network: False
+classes_num: 7
+linear_lr: 1.0e-2
+t_sne: False
+use_dwa: True
+dwa_T: 2.0

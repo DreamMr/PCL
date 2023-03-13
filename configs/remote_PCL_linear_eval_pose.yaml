@@ -1,0 +1,41 @@
+batch_size: 128
+experiment_name: pcl_pose_all
+root: ~
+train: ./dataset/300W_LP
+val: ./dataset/AFLW2000
+test: ./dataset/AFLW2000
+pose: 'all' # Yaw Pitch Roll all
+linear_eval: True
+gpu_ids: '0'
+dataset: 'AFLW2000' # AFLW2000 or 300W-LP
+start_epochs: 0
+neg_alpha: 1.6
+pose_alpha: 0.1
+wd: 1.0e-3
+T: 0.07
+num_threads: 10
+save_epoch: 100
+dim: 512
+#linear_dim: 512
+linear_dim: 32768 # 450 107648 100 6272 128 8192 256 32768
+checkpoint_dir: ./checkpoints
+epochs: 6000
+continue_train: False
+eval: True
+eval_mode: 'exp' # 'exp' or 'pose' or 'face_cycle'
+eval_epochs: 300
+seed: 3456
+log_path: ./logs
+model_name: exppose # 小写
+dataset_name: linearposenpdb # 小写
+img_size: 256  # train 64 eval 100
+lr: 1.0e-4
+print_img: 50
+print_loss : 20
+load_model: ./checkpoints/pcl/best.pth
+save_img_dir: ./save_img
+save_img: False
+print_network: False
+classes_num: 7
+linear_lr: 1.0e-3
+warm_up: -1
