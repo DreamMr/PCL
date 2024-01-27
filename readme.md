@@ -15,6 +15,7 @@ paper link: [arxiv](https://arxiv.org/abs/2211.13490)
 ## 1. Requirements
 
 To install requirements:
+Python Version: 3.7.9
 
 ```
 pip install -r requirements.txt
