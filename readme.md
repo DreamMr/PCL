@@ -70,5 +70,5 @@ python visualize.py
 
 - [ ] Refactor the codes of AU detection and face recognition.
 
-
+**IF YOU HAVE ANY PROBLEM, PLEASE CONTACT wangwenbin@cug.edu.cn OR COMMIT ISSUES**
 
